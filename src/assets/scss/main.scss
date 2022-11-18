@@ -1,0 +1,46 @@
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+
+@import "game-board";
+@import "instructions";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Press Start 2P", cursive;
+    font-size: 1rem;
+}
+
+body {
+    background-color: #C1D2E8;
+}
+
+@media (max-height: 685px) or (max-width: 1000px) {
+    #resolution {
+        display: block !important;
+        z-index: 999999;
+    }
+    #instructions {
+        z-index: -1;
+    }
+
+}
+
+#resolution {
+    text-align: center;
+    display: none;
+    width: 100vw;
+    height: 100vh;
+    background-color: red;
+
+    div{
+        position: absolute;
+        top: 50vh;
+        text-align: center;
+        width: 100%;
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 25px;
+        }
+    }
+}

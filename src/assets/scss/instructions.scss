@@ -1,0 +1,101 @@
+#instructions {
+    position: absolute;
+    top: 77vh;
+    width: 80vw;
+    margin-left: 10vw;
+
+    .btn {
+        height: 50px;
+        width: 50px;
+        background-color: transparent;
+        font-weight: 600;
+        padding: 12px 20px;
+        outline: none;
+        border: 1px solid black;
+        border-radius: 5px;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .btn:active, .btn:hover {
+        transform: translateY(4px);
+    }
+
+    .container {
+        display: grid;
+        grid-template-areas:
+    'up up up up fire fire fire fire'
+    'left left right right fire fire fire fire';
+        margin-bottom: 10px;
+    }
+
+    #up {
+        grid-area: up;
+        font-size: 1rem;
+        text-align: center;
+        align-content: flex-start;
+        padding-bottom: 10px;
+        display: flex;
+        flex-direction: column;
+
+        p {
+            margin: 5px 0 5px 0;
+        }
+    }
+
+    #left {
+        width: 20vw;
+        display: flex;
+        grid-area: left;
+        padding: 5px 25px 5px 25px;
+        font-size: .7rem;
+        justify-content: end;
+
+        button {
+            margin: 0 10px 0 10px;
+        }
+    }
+
+    #right {
+        width: 20vw;
+        display: flex;
+        flex-direction: row-reverse;
+        grid-area: right;
+        padding: 5px 25px 5px 25px;
+        font-size: 1rem;
+        justify-content: start;
+
+        button {
+            margin: 0 10px 0 10px;
+        }
+    }
+
+    #fire {
+        width: 40vw;
+        grid-area: fire;
+        padding: 0 100px 0 100px;
+        align-items: center;
+        font-size: 1rem;
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+
+        button {
+            width: 100%;
+        }
+
+        p {
+            margin-top: 20px;
+        }
+    }
+
+    .control {
+        align-items: center;
+        text-align: center;
+        font-size: 1.5em;
+    }
+
+
+}

@@ -1,0 +1,135 @@
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+#game-board {
+  width: 80vw;
+  height: 70vh;
+  margin: 5vh 0 0 10vw;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(#87ceeb, #e0f6ff);
+}
+
+#instructions {
+  position: absolute;
+  top: 77vh;
+  width: 80vw;
+  margin-left: 10vw;
+}
+#instructions .btn {
+  height: 50px;
+  width: 50px;
+  background-color: transparent;
+  font-weight: 600;
+  padding: 12px 20px;
+  outline: none;
+  border: 1px solid black;
+  border-radius: 5px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#instructions .btn:active, #instructions .btn:hover {
+  transform: translateY(4px);
+}
+#instructions .container {
+  display: grid;
+  grid-template-areas: "up up up up fire fire fire fire" "left left right right fire fire fire fire";
+  margin-bottom: 10px;
+}
+#instructions #up {
+  grid-area: up;
+  font-size: 1rem;
+  text-align: center;
+  align-content: flex-start;
+  padding-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+}
+#instructions #up p {
+  margin: 5px 0 5px 0;
+}
+#instructions #left {
+  width: 20vw;
+  display: flex;
+  grid-area: left;
+  padding: 5px 25px 5px 25px;
+  font-size: 0.7rem;
+  justify-content: end;
+}
+#instructions #left button {
+  margin: 0 10px 0 10px;
+}
+#instructions #right {
+  width: 20vw;
+  display: flex;
+  flex-direction: row-reverse;
+  grid-area: right;
+  padding: 5px 25px 5px 25px;
+  font-size: 1rem;
+  justify-content: start;
+}
+#instructions #right button {
+  margin: 0 10px 0 10px;
+}
+#instructions #fire {
+  width: 40vw;
+  grid-area: fire;
+  padding: 0 100px 0 100px;
+  align-items: center;
+  font-size: 1rem;
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: center;
+}
+#instructions #fire button {
+  width: 100%;
+}
+#instructions #fire p {
+  margin-top: 20px;
+}
+#instructions .control {
+  align-items: center;
+  text-align: center;
+  font-size: 1.5em;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Press Start 2P", cursive;
+  font-size: 1rem;
+}
+
+body {
+  background-color: #C1D2E8;
+}
+
+@media (max-height: 685px) or (max-width: 1000px) {
+  #resolution {
+    display: block !important;
+    z-index: 999999;
+  }
+  #instructions {
+    z-index: -1;
+  }
+}
+#resolution {
+  text-align: center;
+  display: none;
+  width: 100vw;
+  height: 100vh;
+  background-color: red;
+}
+#resolution div {
+  position: absolute;
+  top: 50vh;
+  text-align: center;
+  width: 100%;
+}
+#resolution div h1 {
+  font-size: 2rem;
+  margin-bottom: 25px;
+}
+
+/*# sourceMappingURL=main.css.map */
